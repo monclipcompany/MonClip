@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Dashboard - Monclip</title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    Monclip
+  </div>
+
+  <nav>
+
+    <a href="dashboard.html">
+      Dashboard
+    </a>
+
+    <a href="campaigns.html">
+      Campaigns
+    </a>
+
+    <a
+      id="brandLink"
+      href="brand.html"
+    >
+      Brand
+    </a>
+
+    <a
+      id="adminLink"
+      href="admin.html"
+    >
+      Admin
+    </a>
+
+    <button
+      class="btn logout-btn"
+      type="button"
+    >
+      Logout
+    </button>
+
+  </nav>
+
+</header>
+
+
+<main class="container">
+
+  <!-- Welcome -->
+
+  <div class="card">
+
+    <h1>
+      Welcome,
+      <span id="userName">
+        User
+      </span>
+    </h1>
+
+    <p>
+      Your Monclip account
+    </p>
+
+    <div id="userRoles"></div>
+
+  </div>
+
+
+  <!-- Creator Dashboard -->
+
+  <section id="creatorSection">
+
+    <h2>Creator Dashboard</h2>
+
+    <br>
+
+    <div class="grid">
+
+      <div class="stat">
+
+        <small>
+          Balance
+        </small>
+
+        <h2 id="balance">
+          $0.00
+        </h2>
+
+      </div>
+
+
+      <div class="stat">
+
+        <small>
+          Total Submissions
+        </small>
+
+        <h2 id="submissionCount">
+          0
+        </h2>
+
+      </div>
+
+
+      <div class="stat">
+
+        <small>
+          Approved
+        </small>
+
+        <h2 id="approvedCount">
+          0
+        </h2>
+
+      </div>
+
+
+      <div class="stat">
+
+        <small>
+          Total Earnings
+        </small>
+
+        <h2 id="earnings">
+          $0.00
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <br>
+
+
+    <!-- Quick Actions -->
+
+    <div class="card">
+
+      <h2>
+        Quick Actions
+      </h2>
+
+      <br>
+
+      <a
+        class="btn"
+        href="campaigns.html"
+      >
+        Browse Campaigns
+      </a>
+
+    </div>
+
+
+    <!-- Submission History -->
+
+    <div class="card">
+
+      <h2>
+        Submission History
+      </h2>
+
+      <br>
+
+      <div class="table-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>
+                Campaign
+              </th>
+
+              <th>
+                Status
+              </th>
+
+              <th>
+                Views
+              </th>
+
+              <th>
+                Verified Views
+              </th>
+
+              <th>
+                Earnings
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody
+            id="submissionTable"
+          >
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Brand -->
+
+  <section
+    id="brandSection"
+    class="card hidden"
+  >
+
+    <h2>
+      Brand Dashboard
+    </h2>
+
+    <p>
+      Create and manage your campaigns.
+    </p>
+
+    <br>
+
+    <a
+      class="btn"
+      href="brand.html"
+    >
+      Open Brand Dashboard
+    </a>
+
+  </section>
+
+
+  <!-- Admin -->
+
+  <section
+    id="adminSection"
+    class="card hidden"
+  >
+
+    <h2>
+      Admin Dashboard
+    </h2>
+
+    <p>
+      Review submissions and manage earnings.
+    </p>
+
+    <br>
+
+    <a
+      class="btn"
+      href="admin.html"
+    >
+      Open Admin Dashboard
+    </a>
+
+  </section>
+
+</main>
+
+
+<script src="js/app.js"></script>
+
+<script src="js/creator.js"></script>
+
+</body>
+
+</html>

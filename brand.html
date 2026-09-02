@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Brand Dashboard - Monclip</title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    Monclip
+  </div>
+
+  <nav>
+
+    <a href="dashboard.html">
+      Dashboard
+    </a>
+
+    <a href="campaigns.html">
+      Campaigns
+    </a>
+
+    <a href="brand.html">
+      Brand
+    </a>
+
+    <button
+      class="btn logout-btn"
+      type="button"
+    >
+      Logout
+    </button>
+
+  </nav>
+
+</header>
+
+
+<main class="container">
+
+  <div class="card">
+
+    <h1>
+      Brand Dashboard
+    </h1>
+
+    <p>
+      Create campaigns and manage your clip campaigns.
+    </p>
+
+  </div>
+
+
+  <!-- Create Campaign -->
+
+  <div class="card">
+
+    <h2>
+      Create Campaign
+    </h2>
+
+
+    <form id="campaignForm">
+
+      <label for="title">
+        Campaign Name
+      </label>
+
+      <input
+        id="title"
+        name="title"
+        type="text"
+        placeholder="Example: TikTok Product Campaign"
+        required
+      >
+
+
+      <label for="description">
+        Description
+      </label>
+
+      <textarea
+        id="description"
+        name="description"
+        rows="5"
+        placeholder="Describe what creators should make."
+        required
+      ></textarea>
+
+
+      <label for="platform">
+        Platform
+      </label>
+
+      <select
+        id="platform"
+        name="platform"
+        required
+      >
+
+        <option value="">
+          Select platform
+        </option>
+
+        <option value="TikTok">
+          TikTok
+        </option>
+
+        <option value="YouTube">
+          YouTube Shorts
+        </option>
+
+        <option value="Instagram">
+          Instagram Reels
+        </option>
+
+      </select>
+
+
+      <label for="ratePer1000">
+        Rate per 1,000 Views ($)
+      </label>
+
+      <input
+        id="ratePer1000"
+        name="ratePer1000"
+        type="number"
+        min="0"
+        step="0.01"
+        placeholder="1.00"
+        required
+      >
+
+
+      <label for="budget">
+        Budget ($)
+      </label>
+
+      <input
+        id="budget"
+        name="budget"
+        type="number"
+        min="0"
+        step="0.01"
+        placeholder="500"
+        required
+      >
+
+
+      <button
+        class="btn"
+        type="submit"
+      >
+        Create Campaign
+      </button>
+
+
+      <p
+        id="campaignMessage"
+      ></p>
+
+    </form>
+
+  </div>
+
+
+  <!-- My Campaigns -->
+
+  <div class="card">
+
+    <h2>
+      My Campaigns
+    </h2>
+
+    <div id="myCampaignList"></div>
+
+  </div>
+
+</main>
+
+
+<script src="js/app.js"></script>
+<script src="js/brand.js"></script>
+
+</body>
+
+</html>
