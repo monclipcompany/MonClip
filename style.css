@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  color: #111827;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  height: 70px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar nav a {
+  color: #4b5563;
+}
+
+.btn {
+  display: inline-block;
+  background: #111827;
+  color: white !important;
+  padding: 11px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: white;
+  color: #111827 !important;
+  border: 1px solid #d1d5db;
+}
+
+.hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background: #e5e7eb;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 8vw, 90px);
+  line-height: 0.95;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  color: #6b7280;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #9ca3af;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 40px auto;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.stat {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.stat small {
+  color: #6b7280;
+}
+
+.stat h2 {
+  margin-top: 8px;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+label {
+  font-weight: 600;
+}
+
+.auth-box {
+  width: min(450px, 92%);
+  margin: 70px auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.error {
+  color: #dc2626;
+  margin-top: 10px;
+}
+
+.success {
+  color: #16a34a;
+  margin-top: 10px;
+}
+
+.badge-role {
+  display: inline-block;
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin: 3px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.campaign-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.campaign-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar nav {
+    gap: 8px;
+  }
+
+  .navbar nav a:not(.btn) {
+    display: none;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    text-align: center;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
